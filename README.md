@@ -7,6 +7,8 @@
   
   
   
+  Ref: https://nipafx.dev/junit-5-architecture-jupiter/
+  
 </details>
 
 ## Annotation
@@ -16,7 +18,7 @@
   <summary>@SpringBootTest</summary>
   <br/>
   
-  
+  Ref: https://reflectoring.io/spring-boot-test/
   
 </details>
 
