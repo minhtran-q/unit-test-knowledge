@@ -5,7 +5,7 @@
   <summary>Overview</summary>
   <br/>
   
-  
+  ![](images/detailed_JUnit_5_architecture.png)
   
   Ref: https://nipafx.dev/junit-5-architecture-jupiter/
   
