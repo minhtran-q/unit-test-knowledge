@@ -23,5 +23,13 @@
 </details>
 
 ## Mockito
+### Annotation
+<details>
+  <summary>@Mock vs @MockBean</summary>
+  <br/>
+  
+  Ref: https://reflectoring.io/spring-boot-test/
+  
+</details>
 
 Ref: https://www.javadoc.io/doc/org.mockito/mockito-core/2.23.4/org/mockito/Mockito.html#3
