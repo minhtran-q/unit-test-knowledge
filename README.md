@@ -28,10 +28,15 @@
   <summary>@Mock vs @MockBean</summary>
   <br/>
   
-  @Mock
-  The Mockito.mock() method allows us to create a mock object of a class or an interface.
+  **@Mock**
   
-  Ref: https://reflectoring.io/spring-boot-test/
+  This annotation is a shorthand for the `Mockito.mock()` method. The `Mockito.mock()` method allows us to create a mock object of a class or an interface. 
+  
+  **@MockBean**
+  
+  Use the `@MockBean` to add mock objects to the _Spring application context_.
+   
+  Ref: https://www.baeldung.com/java-spring-mockito-mock-mockbean
   
 </details>
 
