@@ -28,6 +28,9 @@
   <summary>@Mock vs @MockBean</summary>
   <br/>
   
+  @Mock
+  The Mockito.mock() method allows us to create a mock object of a class or an interface.
+  
   Ref: https://reflectoring.io/spring-boot-test/
   
 </details>
