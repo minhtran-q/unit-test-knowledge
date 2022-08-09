@@ -53,5 +53,47 @@
   Ref: https://www.baeldung.com/java-spring-mockito-mock-mockbean
   
 </details>
+<details>
+  <summary>@Mock vs @Spy</summary>
+  <br/>
+  
+  Mock| Spy |
+  --- | --- |
+  A mock in mockito is a normal mock | A spy in mockito is a partial mock | A spy in mockito is a partial mock
+  allows you to stub invocations; that is, return specific values out of method calls | part of the object will be mocked and part will use real method invocations
+  
+  _Example:_
+  ```
+    @Mock
+    private List<String> mockList;
+ 
+    @Spy
+    private List<String> spyList = new ArrayList();
+ 
+    @Test
+    void testMockList() {
+        //by default, calling the methods of mock object will do nothing
+        mockList.add("test");
+
+        Mockito.verify(mockList).add("test");
+        assertEquals(0, mockList.size());
+        assertNull(mockList.get(0));
+    }
+ 
+    @Test
+    void testSpyList() {
+        //spy object will call the real method when not stub
+        spyList.add("test");
+
+        Mockito.verify(spyList).add("test");
+        assertEquals(1, spyList.size());
+        assertEquals("test", spyList.get(0));
+    }
+  ```
+  
+  + Ref: https://dzone.com/articles/mockito-mock-vs-spy-in-spring-boot-tests#:~:text=A%20Mockito%20spy%20is%20a,therefore%20the%20term%20partial%20mock.
+  + Ref: https://stackoverflow.com/questions/28295625/mockito-spy-vs-mock#:~:text=The%20difference%20is%20that%20in,call%20the%20real%20method%20behavior.
+  
+</details>
 
 Ref: https://www.javadoc.io/doc/org.mockito/mockito-core/2.23.4/org/mockito/Mockito.html#3
