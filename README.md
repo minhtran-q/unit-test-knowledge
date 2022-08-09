@@ -57,7 +57,7 @@
   Annotation | Description |
   --- | --- |
   @Mock | Use to create and inject mocked instances without having to call `Mockito.mock` manually. |
-  @Spy |  |
+  @Spy | Part of the object will be mocked and part will use real method invocations |
   @Captor |  |
   @InjectMocks |  |
    
