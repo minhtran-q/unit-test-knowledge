@@ -57,11 +57,12 @@
   Annotation | Description |
   --- | --- |
   @Mock | Use to create and inject mocked instances without having to call `Mockito.mock` manually. |
-  @Spy | Part of the object will be mocked and part will use real method invocations |
-  @Captor |  |
+  @Spy | Part of the object will be mocked and part will use real method invocations. |
+  @Captor | To capture **arguments** that are passed to the methods of mocked objects.  |
   @InjectMocks |  |
    
-  Ref: https://www.baeldung.com/mockito-annotations
+  + Ref: https://www.baeldung.com/mockito-annotations
+  + Ref: https://medium.com/javarevisited/argument-capturing-a-must-know-unit-testing-technique-e88b3a6a6af1
   
 </details>
 <details>
