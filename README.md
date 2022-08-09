@@ -1,6 +1,5 @@
 # Junit 5 Knowledge
 ## Architecture
-
 <details>
   <summary>Overview</summary>
   <br/>
@@ -10,6 +9,7 @@
   Ref: https://nipafx.dev/junit-5-architecture-jupiter/
   
 </details>
+
 ### Terminologies
 
 <details>
