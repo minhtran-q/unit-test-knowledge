@@ -59,7 +59,7 @@
   @Mock | Use to create and inject mocked instances without having to call `Mockito.mock` manually. |
   @Spy | Part of the object will be mocked and part will use real method invocations. |
   @Captor | To capture **arguments** that are passed to the methods of mocked objects.  |
-  @InjectMocks |  |
+  @InjectMocks | Creates an instance of the class and injects the mocks that are created with the `@Mock` (or `@Spy`). |
    
   + Ref: https://www.baeldung.com/mockito-annotations
   + Ref: https://medium.com/javarevisited/argument-capturing-a-must-know-unit-testing-technique-e88b3a6a6af1
