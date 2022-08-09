@@ -25,6 +25,20 @@
 ## Mockito
 ### Annotation
 <details>
+  <summary>Popular annotation</summary>
+  <br/>
+  
+  Annotation | Description |
+  --- | --- |
+  @Mock | Use to create and inject mocked instances without having to call `Mockito.mock` manually. |
+  @Spy |  |
+  @Captor |  |
+  @InjectMocks |  |
+   
+  Ref: https://www.baeldung.com/mockito-annotations
+  
+</details>
+<details>
   <summary>@Mock vs @MockBean</summary>
   <br/>
   
