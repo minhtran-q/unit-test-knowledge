@@ -16,9 +16,11 @@
   <br/>
   
   **Unit Test**
+  
   A unit test covers a single “**unit**”, where a unit commonly is a single class.
   
   **Integration Test**
+  
   An integration test can be any of the following:
   
   + A test that covers multiple “units”. It tests the interaction between two or more classes
