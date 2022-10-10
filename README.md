@@ -15,7 +15,15 @@
   <summary>Unit Test or Integration Test</summary>
   <br/>
   
+  **Unit Test**
+  A unit test covers a single “**unit**”, where a unit commonly is a single class.
   
+  **Integration Test**
+  An integration test can be any of the following:
+  
+  + A test that covers multiple “units”. It tests the interaction between two or more classes
+  + A test that covers multiple layers, might cover the interaction between a business service and the persistence layer, for instance.
+  + A test that covers the whole path through the application. We send a request to the application and check that it responds correctly and has changed the database state according to our expectations.
   
   Ref: https://stackoverflow.com/questions/54658563/unit-test-or-integration-test-in-spring-boot
 </details>
