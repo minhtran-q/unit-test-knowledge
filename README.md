@@ -59,6 +59,10 @@
   <summary>@SpringBootTest</summary>
   <br/>
   
+  Spring Boot provides the `@SpringBootTest` annotation which we can use to create an application context containing all the objects we need for all of the test types.
+  
+  _However, that overusing `@SpringBootTest` might lead to very long-running test suites._
+  
   Ref: https://reflectoring.io/spring-boot-test/
   
 </details>
