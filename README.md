@@ -11,7 +11,14 @@
 </details>
 
 ### Terminologies
-
+<details>
+  <summary>Unit Test or Integration Test</summary>
+  <br/>
+  
+  
+  
+  Ref: https://stackoverflow.com/questions/54658563/unit-test-or-integration-test-in-spring-boot
+</details>
 <details>
   <summary>What is a "Stub"?</summary>
   <br/>
