@@ -12,6 +12,13 @@
 
 ### Terminologies
 <details>
+  <summary>What exactly is a "unit" in unit testing?</summary>
+  <br/>
+  
+   A unit is "the smallest piece of the code that can be usefully tested".
+  
+</details>
+<details>
   <summary>Unit Test vs Integration Test</summary>
   <br/>
   
