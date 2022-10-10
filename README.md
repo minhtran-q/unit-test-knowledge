@@ -74,7 +74,7 @@
   
 </details>
 <details>
-  <summary>@@DataJpaTest</summary>
+  <summary>@DataJpaTest</summary>
   <br/>
   
 </details>
