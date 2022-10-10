@@ -12,7 +12,7 @@
 
 ### Terminologies
 <details>
-  <summary>Unit Test or Integration Test</summary>
+  <summary>Unit Test vs Integration Test</summary>
   <br/>
   
   **Unit Test**
@@ -26,6 +26,18 @@
   + A test that covers multiple “units”. It tests the interaction between two or more classes
   + A test that covers multiple layers, might cover the interaction between a business service and the persistence layer, for instance.
   + A test that covers the whole path through the application. We send a request to the application and check that it responds correctly and has changed the database state according to our expectations.
+  
+  Ref: 
+</details>
+<details>
+  <summary>@SpringBootTest vs Mockito</summary>
+  <br/>
+  
+  In my opinion, even we're using a mocked bean, but we're still running within spring context and for me this is an **integration test**(a unit test doesn't need any spring context to run within).
+  
+  With unit testing  just use **Mockito** or another framework that doesn’t need spring context(`@SpringBootTest`). When writing a test for a service class to test some calculation logic, we don’t need spring context and this is a **PURE** unit test.
+  
+  When running a test in spring context, this is considered an integration test even if you're using `@MockBean`.
   
   Ref: https://stackoverflow.com/questions/54658563/unit-test-or-integration-test-in-spring-boot
 </details>
