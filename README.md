@@ -61,12 +61,33 @@
   
   Spring Boot provides the `@SpringBootTest` annotation which we can use to create an application context containing all the objects we need for all of the test types.
   
+  The @SpringBootTest annotation loads the complete Spring application context.
+  
   _However, that overusing `@SpringBootTest` might lead to very long-running test suites._
   
   Ref: https://reflectoring.io/spring-boot-test/
   
 </details>
-
+<details>
+  <summary>@WebMvcTest</summary>
+  <br/>
+  
+</details>
+<details>
+  <summary>@@DataJpaTest</summary>
+  <br/>
+  
+</details>
+<details>
+  <summary>@DataJdbcTest</summary>
+  <br/>
+  
+</details>
+<details>
+  <summary>@WebFluxTest</summary>
+  <br/>
+  
+</details>
 ## Mockito
 ### Annotation
 <details>
