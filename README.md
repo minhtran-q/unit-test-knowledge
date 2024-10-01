@@ -34,7 +34,6 @@
   + A test that covers multiple layers, might cover the interaction between a business service and the persistence layer, for instance.
   + A test that covers the whole path through the application. We send a request to the application and check that it responds correctly and has changed the database state according to our expectations.
   
-  Ref:
 </details>
 <details>
   <summary>@SpringBootTest vs Mockito</summary>
@@ -47,6 +46,11 @@
   When running a test in spring context, this is considered an integration test even if you're using `@MockBean`.
   
   Ref: https://stackoverflow.com/questions/54658563/unit-test-or-integration-test-in-spring-boot
+</details>
+<details>
+  <summary>JUnit 5 vs Mockito</summary>
+  <br/>
+  
 </details>
 <details>
   <summary>What is a "Stub"?</summary>
