@@ -50,6 +50,16 @@
 <details>
   <summary>JUnit 5 vs Mockito</summary>
   <br/>
+
+  JUnit 5 focuses on writing and running tests, while Mockito focuses on creating and managing mock objects.
+
+  **JUnit 5**
+  + Uses annotations like `@Test`, `@BeforeEach`, `@AfterEach` to define test methods and lifecycle methods.
+  + Provides methods to assert conditions in your tests.
+
+  **Mockito**
+  + Allows creating mock objects to mimic the behavior of real objects.
+  + Defines the behavior of mock objects.
   
 </details>
 <details>
