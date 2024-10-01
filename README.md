@@ -83,10 +83,7 @@
   @Spy | Part of the object will be mocked and part will use real method invocations. |
   @Captor | To capture **arguments** that are passed to the methods of mocked objects.  |
   @InjectMocks | Creates an instance of the class and injects the mocks that are created with the `@Mock` (or `@Spy`). |
-   
-  + Ref: https://www.baeldung.com/mockito-annotations
-  + Ref: https://medium.com/javarevisited/argument-capturing-a-must-know-unit-testing-technique-e88b3a6a6af1
-  + Ref: https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks
+
   
 </details>
 <details>
@@ -141,9 +138,17 @@
         assertEquals("test", spyList.get(0));
     }
   ```
+</details>
+<details>
+  <summary>How @Captor work?</summary>
+  <br/>
   
-  + Ref: https://dzone.com/articles/mockito-mock-vs-spy-in-spring-boot-tests#:~:text=A%20Mockito%20spy%20is%20a,therefore%20the%20term%20partial%20mock.
-  + Ref: https://stackoverflow.com/questions/28295625/mockito-spy-vs-mock#:~:text=The%20difference%20is%20that%20in,call%20the%20real%20method%20behavior.
+</details>
+
+### Mocking Static Methods
+<details>
+  <summary>Example Mocking Static method</summary>
+  <br/>
   
 </details>
 
