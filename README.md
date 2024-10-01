@@ -1,4 +1,4 @@
-# Junit 5 Knowledge
+# Junit Knowledge
 ## Architecture
 <details>
   <summary>Overview</summary>
