@@ -1,4 +1,4 @@
-# Junit Knowledge
+# Unit Test Knowledge
 ## Architecture
 <details>
   <summary>Overview</summary>
