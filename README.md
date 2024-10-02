@@ -198,8 +198,24 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
 <details>
   <summary>What is lenient?</summary>
   <br/>
+
+  In Mockito, the term “lenient” refers to a mode that allows you to bypass strict stubbing rules. By default, Mockito enforces strict stubbing, which means it will throw exceptions if there are unnecessary stubs
+
+  ```
+  public class LenientTest {
   
+      @Test
+      void testLenientStubbing() {
+          List<String> mockList = mock(List.class);
+          
+          // Configure lenient stubbing
+          lenient().when(mockList.get(0)).thenReturn("lenient stub");
   
+          // This won't throw an UnnecessaryStubbingException
+          verify(mockList, never()).get(0);
+      }
+  }
+  ```
 </details>
 
 ### Annotation
