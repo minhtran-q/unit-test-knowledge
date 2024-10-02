@@ -82,7 +82,7 @@
   <br/>
 
   **Stub:**
-  + Stub: A stub is a mock object that has been configured to return specific values or perform specific actions when certain methods are called.
+  + A stub is a mock object that has been configured to return specific values or perform specific actions when certain methods are called.
   
   ```
   @Test
