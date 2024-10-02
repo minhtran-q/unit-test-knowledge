@@ -97,7 +97,7 @@
   
   + Strict stubbing in Mockito is a feature designed to make your tests cleaner and more maintainable. Strict stubbing is enabled by default in _Mockito 3.0 and later_
 
-  Features of Strict Stubbing:
+  **Features of Strict Stubbing:**
   + Detects Unused Stubs
   + Argument Mismatch Detection
 
@@ -111,6 +111,12 @@
   ```
 </details>
 
+<details>
+  <summary>What is lenient?</summary>
+  <br/>
+  
+  
+</details>
 ### Annotation
 <details>
   <summary>Popular annotation</summary>
@@ -306,11 +312,41 @@
 <details>
   <summary>Explain @ExtendWith(MockitoExtension.class)</summary>
   <br/>
+
+  + `@ExtendWith(MockitoExtension.class)` is a JUnit 5 annotation that enables the use of Mockito's features within your test classes.
+  + It processes annotations like `@Mock`, `@InjectMocks`, and `@Captor`.
+
+  _Note: Manual Initialization_
+
+  + We can manually initialize your mocks using `MockitoAnnotations.initMocks(this)` in a `@BeforeEach` method:
+
+  ```
+  public class UserServiceTest {
+    @Mock
+    private UserRepository userRepository;
+
+    @InjectMocks
+    private UserService userService;
+
+    @BeforeEach
+    public void init() {
+        MockitoAnnotations.initMocks(this);
+    }
+
+    @Test
+    public void testFindUser() {
+        // Test logic here
+    }
+  }
+  ```
   
 </details>
 <details>
   <summary>Explain @RunWith(MockitoJUnitRunner.class)</summary>
   <br/>
+
+  + This is used with JUnit 4.
+  + 
   
 </details>
 <details>
