@@ -65,6 +65,18 @@
 
 ### Annotation
 
+<details>
+  <summary>Core annotation</summary>
+  <br/>
+
+  + `@Test`: Marks a method as a test method.
+  + `@BeforeEach`: Executed before each test method.
+  + `@AfterEach`: Executed after each test method.
+  + `@BeforeAll`: Executed once before all test methods in the class. Method must be static.
+  + `@AfterAll`: Executed once after all test methods in the class. Method must be static.
+  
+</details>
+
 ## Mockito
 
 ### Terminology
