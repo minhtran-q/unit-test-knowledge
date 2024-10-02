@@ -394,6 +394,45 @@
 <details>
   <summary>Example Mocking Static method</summary>
   <br/>
+
+  Static methods in Java are methods that belong to the class rather than an instance of the class. They can be called without creating an object of the class. Mocking static methods in Mockito allows you to control and verify the behavior of these methods during testing.
+
+  **Common Use Cases:**
+  + Utility Classes
+  + Complex Static Methods
+  + Specific return for getting current time, date methods 
+
+  **How to use Mocking Static Methods:**
+  + Ensure you have the mockito-inline dependency in your pom.xml
+
+  ```
+  <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-inline</artifactId>
+      <version>4.6.1</version>
+      <scope>test</scope>
+  </dependency>
+  ```
+  ```
+  @Test
+  void testMockStaticMethod() {
+      // Define the specific date and time to return
+      LocalDateTime fixedDateTime = LocalDateTime.of(2024, 10, 2, 12, 0);
+
+      // Mock the static method
+      try (MockedStatic<LocalDateTime> mockedLocalDateTime = mockStatic(LocalDateTime.class)) {
+          mockedLocalDateTime.when(LocalDateTime::now).thenReturn(fixedDateTime);
+
+          // Call the static method and verify the result
+          assertEquals(fixedDateTime, LocalDateTime.now());
+
+          // Verify the static method was called
+          mockedLocalDateTime.verify(LocalDateTime::now);
+      }
+      // Outside the try-with-resources block, the original behavior is restored
+      assertNotEquals(fixedDateTime, LocalDateTime.now());
+  }
+  ```
   
 </details>
 
