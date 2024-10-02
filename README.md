@@ -80,7 +80,27 @@
 <details>
   <summary>Stubbing vs Stub</summary>
   <br/>
+
+  **Stub:**
+  + Stub: A stub is a mock object that has been configured to return specific values or perform specific actions when certain methods are called.
   
+  ```
+  @Test
+  void getUser_success() {
+    // Create a stub for the UserDAO
+    UserDao userDao = Mockito.mock(UserDao.class);
+    ...
+  }
+  ```
+
+  **Stubbing:**
+  + Stubbing is the process of defining the behavior of a mock object’s method. When you stub a method, you specify what it should return when called with certain arguments.
+  + The act of using fake objects.
+
+  **Example:**
+  ```
+  when(mockObject.someMethod()).thenReturn(someValue);
+  ```
 </details>
 
 ### Annotation
