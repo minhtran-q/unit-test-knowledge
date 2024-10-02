@@ -72,6 +72,11 @@
   <br/>
 </details>
 
+<details>
+  <summary>Strict stubbing</summary>
+  <br/>
+</details>
+
 ### Annotation
 <details>
   <summary>Popular annotation</summary>
