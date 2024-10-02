@@ -66,6 +66,7 @@
 ### Annotation
 
 ## Mockito
+
 ### Terminology
 <details>
   <summary>Stubbing vs Stub</summary>
