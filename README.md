@@ -229,6 +229,64 @@
 <details>
   <summary>How @Captor work?</summary>
   <br/>
+
+  + The `@Captor` annotation in Mockito is used to create an instance of `ArgumentCaptor`, which allows you to capture arguments passed to methods during testing. This is useful when you want to inspect the arguments that were passed to a method call.
+  + You use the `capture(` method of ArgumentCaptor in conjunction with `verify()` to capture the arguments passed to a method.
+
+  _Example:_
+
+  ```
+  public class NotificationService {
+      private final MessageSender messageSender;
+  
+      public void sendNotification(String recipient, String message) {
+          Message msg = new Message(recipient, message);
+          messageSender.send(msg);
+      }
+  }
+  ```
+
+  ```
+  public interface MessageSender {
+      void send(Message message);
+  }
+  ```
+  ```
+  public class Message {
+      private String recipient;
+      private String content;
+  
+      ...
+  }
+  ```
+  ```
+  @ExtendWith(MockitoExtension.class)
+  public class NotificationServiceTest {
+  
+      @Mock
+      MessageSender messageSender;
+  
+      @InjectMocks
+      NotificationService notificationService;
+  
+      @Captor
+      ArgumentCaptor<Message> messageCaptor;
+  
+      @Test
+      public void testSendNotification() {
+          // Act
+          notificationService.sendNotification("user@example.com", "Hello, User!");
+  
+          // Capture the argument
+          verify(messageSender).send(messageCaptor.capture());
+          Message capturedMessage = messageCaptor.getValue();
+  
+          // Assert
+          assertEquals("user@example.com", capturedMessage.getRecipient());
+          assertEquals("Hello, User!", capturedMessage.getContent());
+      }
+  }
+  ```
   
 </details>
 <details>
