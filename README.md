@@ -1,5 +1,5 @@
 # Unit Test Knowledge
-## Architecture
+## Junit 5
 <details>
   <summary>Overview</summary>
   <br/>
