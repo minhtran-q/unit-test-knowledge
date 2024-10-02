@@ -355,6 +355,38 @@
 <details>
   <summary>@Timeout</summary>
   <br/>
+
+  It allows you to specify a maximum time limit for a test method. If the test method exceeds this time limit, the test will fail automatically. We can apply `@Timeout` at the _method level_, _class level_, or even to individual test cases within _parameterized tests_.
+
+  **Benefits:**
+  + Helps identify and prevent long-running tests.
+  + Ensures that tests complete within a reasonable time frame.
+
+  _Example:_
+  ```
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  public class TimeoutTest {
+  
+      @Test
+      void testMethodOne() throws InterruptedException {
+          TimeUnit.SECONDS.sleep(6); // This will fail
+      }
+
+      @Test
+      void testMethodTwo() throws InterruptedException {
+          TimeUnit.SECONDS.sleep(4); // This will pass
+      }
+  }
+  ```
+
+  ```
+  @Test
+  @Timeout(value = 5, unit = TimeUnit.SECONDS)
+  void testWithTimeout() throws InterruptedException {
+      // Simulate a long-running task
+      TimeUnit.SECONDS.sleep(10);
+  }
+  ```
   
 </details>
 
