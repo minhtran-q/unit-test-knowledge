@@ -292,6 +292,15 @@
 <details>
   <summary>@InjectMocks vs @Mock</summary>
   <br/>
+
+  `@InjectMocks`:
+
+  + Used to create a mock object of the class under test. Classes have `@Mock` or `@Spy` will Automatically injects to class hold `@InjectMocks`.
+
+  `@Mock`:
+  
+  + Used to create a mock object of any class.
+
   
 </details>
 <details>
@@ -305,7 +314,7 @@
   
 </details>
 <details>
-  <summary>Explain @Timeout</summary>
+  <summary>@Timeout</summary>
   <br/>
   
 </details>
