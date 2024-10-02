@@ -542,6 +542,34 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
   
 </details>
 
+### Functions in Mockito
+
+<details>
+  <summary>doReturn() vs thenReturn() </summary>
+  <br/>
+
+  `thenReturn()`
+  + When you use `thenReturn`, the actual method on the mock object is called first, and then the return value is overridden by the specified value.
+  + It is type-safe, meaning the return type is checked at compile time.
+
+  ```
+  List<String> mockList = mock(List.class);
+  when(mockList.get(0)).thenReturn("first");
+  ```
+
+  `doReturn()`
+  + When you use doReturn, the actual method on the mock object is not called at all. Instead, the specified return value is directly returned.
+  + `doReturn` is used with the do family of methods (`doReturn`, `doThrow`, `doAnswer`, etc.)
+  +  Useful when we need to stub methods that return `void` type or when we want to avoid calling the actual method.
+  +  It is not type-safe, meaning the return type is not checked at compile time.
+
+  _Use case:_
+  + When we need to stub a final method, which cannot be stubbed using the when method.
+  + When the method we want to stub has side effects that we want to avoid during testing.
+  + When we need to stub methods that return void and we want to specify behavior such as throwing an exception.
+  
+</details>
+
 ## Spring Boot Test
 
 <details>
