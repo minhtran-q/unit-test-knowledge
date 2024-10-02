@@ -316,7 +316,8 @@
   <br/>
 
   + `@ExtendWith(MockitoExtension.class)` is a JUnit 5 annotation that enables the use of Mockito's features within your test classes.
-  + It processes annotations like `@Mock`, `@InjectMocks`, and `@Captor`.
+  + Any fields in the test class annotated with `@Mock`, `@Spy`, `@InjectMocks`, or `@Captor` are automatically initialized before each test method runs.
+  + You don’t need to manually call` MockitoAnnotations.initMocks(this)` in a `@Before` method.
 
   _Note: Manual Initialization_
 
@@ -347,8 +348,8 @@
   <summary>Explain @RunWith(MockitoJUnitRunner.class)</summary>
   <br/>
 
-  + This is used with JUnit 4.
-  + 
+  + The @RunWith(MockitoJUnitRunner.class) annotation is used in JUnit 4 to integrate Mockito.
+  + It automatically initializes mocks, spies, and other Mockito features.
   
 </details>
 <details>
