@@ -68,16 +68,6 @@
 ## Mockito
 ### Terminology
 <details>
-  <summary>What is Stub?</summary>
-  <br/>
-</details>
-
-<details>
-  <summary>Strict stubbing</summary>
-  <br/>
-</details>
-
-<details>
   <summary>Stubbing vs Stub</summary>
   <br/>
 
@@ -99,6 +89,27 @@
   ```
   when(mockObject.someMethod()).thenReturn(someValue);
   ```
+</details>
+
+<details>
+  <summary>What is strict stubbing?</summary>
+  <br/>
+  
+  + Strict stubbing in Mockito is a feature designed to make your tests cleaner and more maintainable. Strict stubbing is enabled by default in _Mockito 3.0 and later_
+
+  Features of Strict Stubbing:
+  + Detects Unused Stubs
+  + Argument Mismatch Detection
+
+  _Example:_
+
+```
+// Stubbing a method
+when(mockObject.someMethod()).thenReturn(someValue);
+
+// If someMethod() is never called in the test, Mockito will throw an UnnecessaryStubbingException
+```
+  
 </details>
 
 ### Annotation
