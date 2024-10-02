@@ -55,7 +55,7 @@
 
   **JUnit 5**
   + Uses annotations like `@Test`, `@BeforeEach`, `@AfterEach` to define test methods and lifecycle methods.
-  + Provides methods to assert conditions in your tests, such as assertEquals(), assertTrue(), and assertNull().
+  + Provides methods to assert conditions in your tests, such as `assertEquals()`, `assertTrue()`, and `assertNull()`.
 
   **Mockito**
   + Allows creating mock objects to mimic the behavior of real objects.
