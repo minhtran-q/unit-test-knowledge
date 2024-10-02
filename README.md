@@ -12,6 +12,13 @@
 
 ### Terminology
 <details>
+  <summary>What is Mockito?</summary>
+  <br/>
+
+  Mockito is a popular Java-based mocking framework used for unit testing. It allows developers to create mock objects and define their behavior.
+  
+</details>
+<details>
   <summary>What exactly is a "unit" in unit testing?</summary>
   <br/>
   
