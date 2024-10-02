@@ -55,7 +55,7 @@
 
   **JUnit 5**
   + Uses annotations like `@Test`, `@BeforeEach`, `@AfterEach` to define test methods and lifecycle methods.
-  + Provides methods to assert conditions in your tests.
+  + Provides methods to assert conditions in your tests, such as assertEquals(), assertTrue(), and assertNull().
 
   **Mockito**
   + Allows creating mock objects to mimic the behavior of real objects.
@@ -103,13 +103,12 @@
 
   _Example:_
 
-```
-// Stubbing a method
-when(mockObject.someMethod()).thenReturn(someValue);
-
-// If someMethod() is never called in the test, Mockito will throw an UnnecessaryStubbingException
-```
+  ```
+  // Stubbing a method
+  when(mockObject.someMethod()).thenReturn(someValue);
   
+  // If someMethod() is never called in the test, Mockito will throw an UnnecessaryStubbingException
+  ```
 </details>
 
 ### Annotation
@@ -144,40 +143,9 @@ when(mockObject.someMethod()).thenReturn(someValue);
 <details>
   <summary>@Mock vs @Spy</summary>
   <br/>
-  
-  Mock| Spy |
-  --- | --- |
-  A mock in mockito is a normal mock | A spy in mockito is a partial mock | A spy in mockito is a partial mock
-  allows you to stub invocations; that is, return specific values out of method calls | part of the object will be mocked and part will use real method invocations
-  
-  _Example:_
-  ```
-    @Mock
-    private List<String> mockList;
- 
-    @Spy
-    private List<String> spyList = new ArrayList();
- 
-    @Test
-    void testMockList() {
-        //by default, calling the methods of mock object will do nothing
-        mockList.add("test");
 
-        Mockito.verify(mockList).add("test");
-        assertEquals(0, mockList.size());
-        assertNull(mockList.get(0));
-    }
- 
-    @Test
-    void testSpyList() {
-        //spy object will call the real method when not stub
-        spyList.add("test");
-
-        Mockito.verify(spyList).add("test");
-        assertEquals(1, spyList.size());
-        assertEquals("test", spyList.get(0));
-    }
-  ```
+  
+  
 </details>
 <details>
   <summary>How @Captor work?</summary>
