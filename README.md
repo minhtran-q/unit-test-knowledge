@@ -87,9 +87,7 @@
   ```
   @Test
   void getUser_success() {
-    // Create a stub for the UserDAO
-    UserDao userDao = Mockito.mock(UserDao.class);
-    ...
+    UserDao userDao = Mockito.mock(UserDao.class); // Create a stub for the UserDAO
   }
   ```
 
