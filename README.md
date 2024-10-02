@@ -143,8 +143,87 @@
 <details>
   <summary>@Mock vs @Spy</summary>
   <br/>
-
   
+  `@Mock`
+
+  + **Purpose:** Creates a mock object that simulates the behavior of a real object.
+  + **Behavior:** By default, all methods of the mock return default values (e.g., null for objects, 0 for integers).
+
+  _Example:_
+  ```
+  @Mock
+  List<String> mockedList;
+  
+  @Test
+  public void testMock() {
+      mockedList.add("one");
+      Mockito.verify(mockedList).add("one");
+      assertEquals(0, mockedList.size()); // size is still 0 because it's a mock
+  }
+  ```
+  
+  `@Spy`
+  
+  + **Purpose:** Creates a spy object that wraps a real instance of the class.
+  + **Behavior:** By default, all methods of the spy call the real methods unless they are stubbed.
+
+  _Example:_
+  ```
+  @Spy
+  List<String> spyList = new ArrayList<>();
+
+  @Test
+  public void testSpy() {
+      spyList.add("one");
+      spyList.add("two");
+
+      verify(spyList).add("one");
+      verify(spyList).add("two");
+
+      assertEquals(2, spyList.size());
+      assertEquals("one", spyList.get(0));
+      assertEquals("two", spyList.get(1));
+  }
+  ```
+
+  ```
+  @Spy
+  MyService myService = new MyService();
+
+  @InjectMocks
+  MyController myController;
+
+  @Test
+  public void testServiceSpy() {
+      doReturn("Mocked Response").when(myService).someMethod();
+
+      String response = myController.handleRequest();
+
+      assertEquals("Mocked Response", response);
+      assertEquals("Another Real Response", anotherResponse); // This will call the real method
+      verify(myService).someMethod();
+      verify(myService).anotherMethod();
+  }
+
+  class MyService {
+      public String someMethod() {
+          return "Real Response";
+      }
+  
+      public String anotherMethod() {
+          return "Another Real Response";
+      }
+  }
+
+  class MyController {
+      private final MyService myService;
+  
+      public String handleRequest() {
+          return myService.someMethod();
+      }
+  }
+  ```
+  + In this example, The someMethod is stubbed to return a mocked response, while other methods of MyService can still be called normally.
   
 </details>
 <details>
