@@ -77,6 +77,77 @@
   
 </details>
 
+<details>
+  <summary>@ParameterizedTest</summary>
+  <br/>
+
+  + `@ParameterizedTest` in JUnit 5 to run the same test method multiple times with different parameters.
+
+  _Example:_
+
+  ```
+  public class Numbers {
+    public static boolean isOdd(int number) {
+        return number % 2 != 0;
+    }
+  }
+  ```
+
+  ```
+  public class NumbersTest {
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 3, 5, -3, 15, Integer.MAX_VALUE})
+    void isOdd_ShouldReturnTrueForOddNumbers(int number) {
+        assertTrue(Numbers.isOdd(number));
+    }
+  }
+  ```
+
+_Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single array of values for a parameterized test, and it can only be used for providing a single argument per test.
+  
+</details>
+
+<details>
+  <summary>Using @CsvSource for Multiple Parameters</summary>
+  <br/>
+
+  **Example with** `@CsvSource`
+
+  ```
+  @ParameterizedTest
+  @CsvSource({
+      "apple, 1",
+      "banana, 2",
+      "cherry, 3"
+  })
+  void testWithMultipleParameters(String fruit, int quantity) {
+      assertNotNull(fruit);
+      assertTrue(quantity > 0);
+  }
+  ```
+
+  **Example with** `@MethodSource`
+
+  ```
+  @ParameterizedTest
+  @MethodSource("provideFruitsAndQuantities")
+  void testWithMultipleParameters(String fruit, int quantity) {
+      assertNotNull(fruit);
+      assertTrue(quantity > 0);
+  }
+  
+  static Stream<Arguments> provideFruitsAndQuantities() {
+      return Stream.of(
+          Arguments.of("apple", 1),
+          Arguments.of("banana", 2),
+          Arguments.of("cherry", 3)
+      );
+  }
+  ```
+  
+</details>
+
 ## Mockito
 
 ### Terminology
