@@ -16,8 +16,8 @@
   <br/>
 
   + Arrange: Set up the necessary objects and prepare the conditions for the test.
-  + Act: Execute the method or functionality being tested.
-  + Assert: Verify that the outcome is as expected.
+  + Act: Execute the method or functionality.
+  + Assert: Verify the outcome is as expected.
   
 </details>
 <details>
