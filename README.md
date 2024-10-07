@@ -15,9 +15,9 @@
   <summary>Arrange-Act-Assert (AAA) Pattern</summary>
   <br/>
 
-  + Arrange: Set up the necessary objects and prepare the conditions for the test.
-  + Act: Execute the method or functionality.
-  + Assert: Verify the outcome is as expected.
+  + **Arrange:** Set up the necessary objects and prepare the conditions for the test.
+  + **Act:** Execute the method or functionality.
+  + **Assert:** Verify the outcome is as expected.
   
 </details>
 <details>
