@@ -12,10 +12,12 @@
 
 ### Terminology
 <details>
-  <summary>What is Mockito?</summary>
+  <summary>Arrange-Act-Assert (AAA) Pattern</summary>
   <br/>
 
-  Mockito is a popular Java-based mocking framework used for unit testing. It allows developers to create mock objects and define their behavior.
+  + Arrange: Set up the necessary objects and prepare the conditions for the test.
+  + Act: Execute the method or functionality being tested.
+  + Assert: Verify that the outcome is as expected.
   
 </details>
 <details>
@@ -158,6 +160,13 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
 ## Mockito
 
 ### Terminology
+<details>
+  <summary>What is Mockito?</summary>
+  <br/>
+
+  Mockito is a popular Java-based mocking framework used for unit testing. It allows developers to create mock objects and define their behavior.
+  
+</details>
 <details>
   <summary>Stubbing vs Stub</summary>
   <br/>
