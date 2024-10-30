@@ -418,7 +418,7 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
 
   `@InjectMocks`:
 
-  + Used to create a mock object of the class under test. Classes have `@Mock` or `@Spy` will Automatically injects to class hold `@InjectMocks`.
+  + Applied to the instance of the class you are testing. `@InjectMocks` create an instance of this class and inject all available `@Mock` dependencies into it. Classes have `@Mock` or `@Spy` will Automatically injects to class hold `@InjectMocks`.
 
   `@Mock`:
   
