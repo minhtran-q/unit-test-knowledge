@@ -590,9 +590,8 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
   <summary>@SpringBootTest</summary>
   <br/>
   
-  Spring Boot provides the `@SpringBootTest` annotation which we can use to create an application context containing all the objects we need for all of the test types.
-  
-  The @SpringBootTest annotation loads the complete Spring application context.
+  + `@SpringBootTest` is a Spring Boot annotation that is used for integration testing, it loads the entire application context. This includes loading configurations, services, repositories, and other components.
+  + By default, `@SpringBootTest` does not start an embedded server. However, you can configure it to start one by setting `@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)`.
   
   _However, that overusing `@SpringBootTest` might lead to very long-running test suites._
   
