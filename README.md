@@ -15,6 +15,8 @@
   <summary>Arrange-Act-Assert (AAA) Pattern</summary>
   <br/>
 
+  This pattern divides a test into three clear stages:
+
   + **Arrange:** Set up the necessary objects and prepare the conditions for the test.
   + **Act:** Execute the method or functionality.
   + **Assert:** Verify the outcome is as expected.
