@@ -35,15 +35,18 @@
   
   **Unit Test**
   
-  A unit test covers a single “**unit**”, where a unit commonly is a single class.
+  + To test individual units (usually methods or functions) of code.
+  + Very fast, because they don’t rely on external resources.
+
+  _Example:_ Testing a method that calculates the discount for an order to ensure it returns the correct discount based on input values.
   
   **Integration Test**
-  
-  An integration test can be any of the following:
-  
-  + A test that covers multiple “units”. It tests the interaction between two or more classes
-  + A test that covers multiple layers, might cover the interaction between a business service and the persistence layer, for instance.
-  + A test that covers the whole path through the application. We send a request to the application and check that it responds correctly and has changed the database state according to our expectations.
+
+  + To verify different parts of a system interact correctly.
+  + These tests focus on the interaction between components and may involve databases, network calls, or file systems.
+  + Slower, as they might involve real interactions with external resources.
+
+  _Example:_ Testing an order checkout process that interacts with payment, inventory, and notification systems.
   
 </details>
 <details>
