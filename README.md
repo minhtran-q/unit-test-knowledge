@@ -602,6 +602,40 @@ _Note:_ The `@ValueSource` annotation in JUnit 5 is designed to provide a single
 <details>
   <summary>@WebMvcTest</summary>
   <br/>
+
+  `@WebMvcTest` used for testing the controller layer in a Spring MVC application. 
+
+  + It only loads the beans related to the web layer, primarily focusing on controllers annotated with `@Controller` or `@RestController`.
+  + It provides a `MockMvc` bean, `MockMvc` simulates HTTP requests without requiring an actual servlet container, allowing you to test the controller's HTTP endpoints.
+  + Unlike `@SpringBootTest`, which loads the entire application context, `@WebMvcTest` is lightweight, loading only the components necessary to handle web requests.
+
+  Example:
+
+  ```
+  @RunWith(SpringRunner.class)
+  @WebMvcTest(MyController.class)  // Specifies the controller to test
+  public class MyControllerTest {
+  
+      @Autowired
+      private MockMvc mockMvc;
+  
+      @MockBean
+      private MyService myService;  // Mock any service the controller depends on
+  
+      @Test
+      public void testGetEndpoint() throws Exception {
+          // Define behavior of the mocked service
+          when(myService.getData()).thenReturn("mocked data");
+  
+          // Perform a GET request to the controller endpoint and check response
+          mockMvc.perform(get("/my-endpoint"))
+                 .andExpect(status().isOk())
+                 .andExpect(content().string("mocked data"));
+      }
+  }
+  ```
+
+  If needed, you can mock or inject these dependencies using `@MockBean` or `@Autowired`.
   
 </details>
 <details>
